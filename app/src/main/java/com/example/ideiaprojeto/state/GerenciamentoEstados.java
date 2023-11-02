@@ -15,8 +15,15 @@ public class GerenciamentoEstados {
                 Materia.builder()
                         .nome("Sistemas")
                         .atividades(
-                                List.of(new Atividade())
+                                List.of(
+                                        Atividade.builder()
+                                            .nome("A1")
+                                            .peso(2)
+                                            .nota(6.0)
+                                            .build()
+                                )
                         )
+                        .build()
         );
     }
 

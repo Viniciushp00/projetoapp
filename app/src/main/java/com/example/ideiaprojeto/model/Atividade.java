@@ -40,6 +40,10 @@ public class Atividade {
         this.nota = nota;
     }
 
+    public static AtividadeBuilder builder() {
+        return new AtividadeBuilder();
+    }
+
     public static class AtividadeBuilder {
 
         String nome;
@@ -51,12 +55,12 @@ public class Atividade {
             return this;
         }
 
-        public AtividadeBuilder atividades(Integer peso) {
+        public AtividadeBuilder peso(Integer peso) {
             this.peso = peso;
             return this;
         }
 
-        public AtividadeBuilder atividades(Double nota) {
+        public AtividadeBuilder nota(Double nota) {
             this.nota = nota;
             return this;
         }
