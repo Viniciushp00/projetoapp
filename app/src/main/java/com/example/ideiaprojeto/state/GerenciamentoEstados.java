@@ -21,7 +21,13 @@ public class GerenciamentoEstados {
                                             .peso(2)
                                             .nota(6.0)
                                             .build()
+                                        ,Atividade.builder()
+                                                .nome("A2")
+                                                .peso(4)
+                                                .nota(8.0)
+                                                .build()
                                 )
+
                         )
                         .build()
         );
