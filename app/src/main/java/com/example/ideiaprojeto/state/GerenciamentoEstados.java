@@ -31,6 +31,26 @@ public class GerenciamentoEstados {
                         )
                         .build()
         );
+        materias.add(
+                Materia.builder()
+                        .nome("Linguagem de Automatos")
+                        .atividades(
+                                List.of(
+                                        Atividade.builder()
+                                                .nome("A1")
+                                                .peso(2)
+                                                .nota(6.0)
+                                                .build()
+                                        ,Atividade.builder()
+                                                .nome("A2")
+                                                .peso(4)
+                                                .nota(8.0)
+                                                .build()
+                                )
+
+                        )
+                        .build()
+        );
     }
 
     public static List<Materia> getMaterias() {

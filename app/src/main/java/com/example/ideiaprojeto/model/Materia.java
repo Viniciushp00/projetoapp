@@ -12,6 +12,9 @@ public class Materia {
         this.nome = builder.nome;
         this.atividades = builder.atividades;
     }
+    public String getNome() {
+        return nome;
+    }
 
     public static MateriaBuilder builder() {
         return new MateriaBuilder();
