@@ -1,8 +1,9 @@
 package com.example.ideiaprojeto.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Materia {
+public class Materia implements Serializable {
 
     String nome;
 
@@ -14,6 +15,10 @@ public class Materia {
     }
     public String getNome() {
         return nome;
+    }
+
+    public List<Atividade> getAtividades() {
+        return atividades;
     }
 
     public static MateriaBuilder builder() {

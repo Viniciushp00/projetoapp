@@ -1,5 +1,8 @@
 package com.example.ideiaprojeto.state;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.ideiaprojeto.model.AppContext;
 import com.example.ideiaprojeto.model.Atividade;
 import com.example.ideiaprojeto.model.Materia;
 
@@ -7,11 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GerenciamentoEstados {
+    public static final AppContext context;
 
-    private static final List<Materia> materias = new ArrayList<>();
+    public static Materia atualMateria;
 
     static {
-        materias.add(
+        context = AppContext.builder().context(null).atividades(new ArrayList<Materia>()).build();
+        context.materias.add(
                 Materia.builder()
                         .nome("Sistemas")
                         .atividades(
@@ -31,9 +36,90 @@ public class GerenciamentoEstados {
                         )
                         .build()
         );
-        materias.add(
+        context.materias.add(
                 Materia.builder()
                         .nome("Linguagem de Automatos")
+                        .atividades(
+                                List.of(
+                                        Atividade.builder()
+                                                .nome("Dahora")
+                                                .peso(2)
+                                                .nota(6.0)
+                                                .build()
+                                        ,Atividade.builder()
+                                                .nome("Funciona")
+                                                .peso(4)
+                                                .nota(8.0)
+                                                .build()
+                                )
+
+                        )
+                        .build()
+        );
+
+        context.materias.add(
+                Materia.builder()
+                        .nome("Matematica")
+                        .atividades(
+                                List.of(
+                                        Atividade.builder()
+                                                .nome("A1")
+                                                .peso(2)
+                                                .nota(6.0)
+                                                .build()
+                                        ,Atividade.builder()
+                                                .nome("A2")
+                                                .peso(4)
+                                                .nota(8.0)
+                                                .build()
+                                )
+
+                        )
+                        .build()
+        );
+        context.materias.add(
+                Materia.builder()
+                        .nome("Matematica")
+                        .atividades(
+                                List.of(
+                                        Atividade.builder()
+                                                .nome("A1")
+                                                .peso(2)
+                                                .nota(6.0)
+                                                .build()
+                                        ,Atividade.builder()
+                                                .nome("A2")
+                                                .peso(4)
+                                                .nota(8.0)
+                                                .build()
+                                )
+
+                        )
+                        .build()
+        );
+        context.materias.add(
+                Materia.builder()
+                        .nome("Matematica")
+                        .atividades(
+                                List.of(
+                                        Atividade.builder()
+                                                .nome("A1")
+                                                .peso(2)
+                                                .nota(6.0)
+                                                .build()
+                                        ,Atividade.builder()
+                                                .nome("A2")
+                                                .peso(4)
+                                                .nota(8.0)
+                                                .build()
+                                )
+
+                        )
+                        .build()
+        );
+        context.materias.add(
+                Materia.builder()
+                        .nome("Matematica")
                         .atividades(
                                 List.of(
                                         Atividade.builder()
@@ -54,7 +140,12 @@ public class GerenciamentoEstados {
     }
 
     public static List<Materia> getMaterias() {
-        return materias;
+        return context.materias;
     }
+
+    public static void setContext(AppCompatActivity cont){
+        context.context = cont;
+    }
+
 
 }

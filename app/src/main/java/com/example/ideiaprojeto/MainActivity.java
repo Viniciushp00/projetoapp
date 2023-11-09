@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        GerenciamentoEstados.setContext(this);
+
         RecyclerView recycleView_materias = findViewById(R.id.recycleView_materias);
         recycleView_materias.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
         //Para dar mais desempenho a lista

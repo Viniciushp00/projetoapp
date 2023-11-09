@@ -1,17 +1,18 @@
 package com.example.ideiaprojeto.Adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ideiaprojeto.R;
+import com.example.ideiaprojeto.listadeAtividades;
 import com.example.ideiaprojeto.model.Materia;
 import com.example.ideiaprojeto.state.GerenciamentoEstados;
-
-import java.util.List;
 
 public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.MateriaViewHolder> {
 
@@ -30,6 +31,7 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.MateriaV
 
         Materia materia = GerenciamentoEstados.getMaterias().get(position);
         holder.nome.setText(materia.getNome());
+        holder.materia = materia;
     }
 
     @Override
@@ -38,7 +40,19 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.MateriaV
     }
 
     public class MateriaViewHolder extends  RecyclerView.ViewHolder {
-        TextView nome = itemView.findViewById(R.id.nome_materia);
+
+        Materia materia;
+        TextView nome = itemView.findViewById(R.id.nome_atividades);
+        Button btnConfiguracao = itemView.findViewById(R.id.btnConfiguracao);
+        Button btnCalculo = itemView.findViewById(R.id.btnCalcular);
+
+        {
+            btnConfiguracao.setOnClickListener((View -> {
+                Intent telaListAtividades = new Intent(GerenciamentoEstados.context.context.getApplicationContext(), listadeAtividades.class);
+                GerenciamentoEstados.atualMateria = materia;
+                GerenciamentoEstados.context.context.startActivity(telaListAtividades);
+            }));
+        }
 
         public MateriaViewHolder(@NonNull View itemView) {
             super(itemView);
