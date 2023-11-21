@@ -36,7 +36,7 @@
 
         <Button
             style="@style/buttom"
-            android:id="@+id/btnConfiguracao"
+            android:id="@+id/btnConfiguracaoAtividade"
             android:text="Configurar"
             android:textSize="10sp" />
 

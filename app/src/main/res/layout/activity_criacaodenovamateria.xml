@@ -4,70 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".criacaodenovamateria"
-    android:background="@color/lightPurple">
+    android:background="@color/lightPurple"
+    tools:context=".criacaodenovamateria">
 
     <View
         android:id="@+id/containerComponents7"
         style="@style/containerComponents"
-        android:layout_width="160dp"
+        android:layout_width="0dp"
         android:layout_height="64dp"
-        android:layout_margin="10dp"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="381dp"
 
-        />
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="21dp"
+        app:layout_constraintEnd_toStartOf="@+id/valorAtt3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valorAtt2" />
 
     <View
         android:id="@+id/containerComponents9"
         style="@style/containerComponents"
-        android:layout_width="160dp"
+        android:layout_width="0dp"
         android:layout_height="64dp"
-        android:layout_margin="10dp"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="235dp"
 
-        />
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/containerComponents8"
+        app:layout_constraintEnd_toStartOf="@+id/valorAtt1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/containerComponents10"
         style="@style/containerComponents"
-        android:layout_width="202dp"
-        android:layout_height="55dp"
-        android:layout_margin="10dp"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="81dp"
+        android:layout_width="151dp"
+        android:layout_height="0dp"
 
-        />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <View
         android:id="@+id/containerComponents8"
         style="@style/containerComponents"
-        android:layout_width="160dp"
+        android:layout_width="151dp"
         android:layout_height="64dp"
-        android:layout_margin="10dp"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="310dp"
 
-        />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Atividade 3"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="394dp" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Notas N1"
-        android:textSize="34sp"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="170dp" />
+        android:layout_marginTop="71dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponents7"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents7"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents7"
+        app:layout_constraintTop_toTopOf="@+id/containerComponents9" />
 
     <TextView
         android:id="@+id/textView12"
@@ -75,89 +69,136 @@
         android:layout_height="wrap_content"
         android:text="Atividade 2"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="323dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponents8"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents8"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents8"
+        app:layout_constraintTop_toTopOf="@+id/containerComponents8" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="20dp"
+        android:text="Atividade 3"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponents7"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents7"
+        app:layout_constraintTop_toTopOf="@+id/containerComponents7"
+        app:layout_constraintVertical_bias="0.208" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Notas N1"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
         android:text="Atividade 1"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="246dp" />
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents9"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents9"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <EditText
-        android:id="@+id/editTextText6"
+        android:id="@+id/valorAtt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="33dp"
         android:ems="10"
         android:inputType="text"
         android:text="Digite a nota"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="245dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <EditText
-        android:id="@+id/editTextText7"
+        android:id="@+id/valorAtt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:inputType="text"
         android:text="Digite a nota"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="323dp" />
+        app:layout_constraintStart_toStartOf="@+id/valorAtt1"
+        app:layout_constraintTop_toBottomOf="@+id/valorAtt1" />
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/valorAtt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
         android:ems="10"
         android:inputType="text"
         android:text="Digite a nota"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="394dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponents7"
+        app:layout_constraintStart_toStartOf="@+id/valorAtt2" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
         android:text="Nova materia"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nome da Materia"
+        android:layout_marginTop="24dp"
+        android:text="Nome da \nMateria"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="91dp" />
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents10"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents10"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/editTextText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/nomeMateria"
+        android:layout_width="200dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="29dp"
         android:ems="10"
         android:inputType="text"
         android:text="Digite o nome "
-        tools:layout_editor_absoluteX="212dp"
-        tools:layout_editor_absoluteY="91dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/containerComponents10"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <View
-        android:layout_width="match_parent"
+        android:id="@+id/view"
+        android:layout_width="0dp"
         android:layout_height="3dp"
-        android:layout_margin="5dp"
         android:background="@color/black"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="156dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSalvar"
         android:layout_width="97dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:text="Salvar"
-        tools:layout_editor_absoluteX="298dp"
-        tools:layout_editor_absoluteY="823dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

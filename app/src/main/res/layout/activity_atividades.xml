@@ -12,8 +12,8 @@
         android:id="@+id/containerComponents"
         style="@style/containerComponents"
         android:layout_margin="10dp"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="124dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,7 +29,7 @@
 
 
     <Button
-        android:id="@+id/btnConfiguracao"
+        android:id="@+id/btnConfiguracaoAtividade"
         style="@style/buttom"
         android:layout_width="wrap_content"
         android:text="Configurar"

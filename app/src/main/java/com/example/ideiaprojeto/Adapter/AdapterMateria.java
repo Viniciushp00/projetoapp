@@ -43,7 +43,7 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.MateriaV
 
         Materia materia;
         TextView nome = itemView.findViewById(R.id.nome_atividades);
-        Button btnConfiguracao = itemView.findViewById(R.id.btnConfiguracao);
+        Button btnConfiguracao = itemView.findViewById(R.id.btnConfiguracaoAtividade);
         Button btnCalculo = itemView.findViewById(R.id.btnCalcular);
 
         {

@@ -11,12 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ideiaprojeto.R;
-import com.example.ideiaprojeto.listadeAtividades;
+import com.example.ideiaprojeto.activity_configuracao;
 import com.example.ideiaprojeto.model.Atividade;
 import com.example.ideiaprojeto.model.Materia;
 import com.example.ideiaprojeto.state.GerenciamentoEstados;
-
-import org.w3c.dom.Text;
 
 public class AdapaterAtividades extends RecyclerView.Adapter<AdapaterAtividades.AtividadeViewHolder> {
 
@@ -40,6 +38,7 @@ public class AdapaterAtividades extends RecyclerView.Adapter<AdapaterAtividades.
 
         Atividade atividade = materia.getAtividades().get(position);
         holder.nomeAtividade.setText(atividade.getNome());
+        holder.atividade = atividade;
     }
 
     @Override
@@ -48,8 +47,18 @@ public class AdapaterAtividades extends RecyclerView.Adapter<AdapaterAtividades.
     }
 
     public class AtividadeViewHolder extends  RecyclerView.ViewHolder {
+
+        Atividade atividade;
         TextView nomeAtividade = itemView.findViewById(R.id.nome_atividades);
-        Button btnConfiguracao = itemView.findViewById(R.id.btnConfiguracao);
+        Button btnConfiguracao = itemView.findViewById(R.id.btnConfiguracaoAtividade);
+
+        {
+            btnConfiguracao.setOnClickListener((View -> {
+                Intent telaConfiguracao = new Intent(GerenciamentoEstados.context.context.getApplicationContext(), activity_configuracao.class);
+                GerenciamentoEstados.atualAtividade = atividade;
+                GerenciamentoEstados.context.context.startActivity(telaConfiguracao);
+            }));
+        }
 
 
         public AtividadeViewHolder(@NonNull View itemView) {

@@ -4,81 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_configuracao"
-    android:background="@color/lightPurple">
-
-    <View
-        android:id="@+id/containerComponents"
-        style="@style/containerComponents"
-        android:layout_width="204dp"
-        android:layout_height="76dp"
-        android:layout_margin="10dp"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="86dp"
-
-        />
+    android:background="@color/lightPurple"
+    tools:context=".activity_configuracao">
 
     <View
         android:id="@+id/containerComponents2"
         style="@style/containerComponents"
-        android:layout_width="191dp"
-        android:layout_height="74dp"
-        android:layout_margin="10dp"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="175dp"
-
-        />
-
-    <TextView
-        android:id="@+id/textprincconfig"
-        style="@style/Text_View_princ"
-        android:text="Atividades N1"
-        tools:ignore="MissingConstraints"/>
-
-    <TextView
-        android:id="@+id/textqtdnotas"
-        style="@style/Text_View_segun"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
-        android:text="Quantas atividade\nforam"
+        android:layout_width="180dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/pesoatividade"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textprincconfig"
+        app:layout_constraintTop_toBottomOf="@+id/containerComponents"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/inputqtdnotas"
-        style="@style/ImputText"
-        android:inputType="number"
-        android:text="Digite aqui"
-        app:layout_constraintStart_toEndOf="@id/textqtdnotas"
-        app:layout_constraintTop_toBottomOf="@id/textprincconfig"
+    <View
+        android:id="@+id/containerComponents"
+        style="@style/containerComponents"
+        android:layout_width="184dp"
+        android:layout_height="76dp"
 
-        android:layout_marginTop="20dp"
-        />
-
-    <TextView
-        android:id="@+id/textpesonota"
-        style="@style/Text_View_segun"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="40dp"
-        android:text="Peso"
+        android:layout_marginStart="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/nomeatividade"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textqtdnotas" />
-
-    <EditText
-        style="@style/ImputText"
-        android:text="Digite aqui"
-        app:layout_constraintStart_toEndOf="@id/textqtdnotas"
-        app:layout_constraintTop_toTopOf="@id/textpesonota"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textprincconfig"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:text="Salvar"
-        tools:layout_editor_absoluteX="301dp"
-        tools:layout_editor_absoluteY="821dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/pesoatividade"
+        style="@style/ImputText"
+        android:layout_marginEnd="5dp"
+        android:text="Digite aqui"
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponents2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/containerComponents2"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/nomeatividade"
+        style="@style/ImputText"
+        android:layout_marginEnd="5dp"
+        android:text="Digite aqui"
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/containerComponents"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textnomeatividade"
+        style="@style/Text_View_segun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome da \natividade"
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintTop_toTopOf="@+id/containerComponents"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textpesonota"
+        style="@style/Text_View_segun"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Peso"
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponents2"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents2"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents2"
+        app:layout_constraintTop_toTopOf="@+id/containerComponents2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textprincconfig"
+        style="@style/Text_View_princ"
+        android:layout_marginTop="20dp"
+        android:text="Atividades N1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

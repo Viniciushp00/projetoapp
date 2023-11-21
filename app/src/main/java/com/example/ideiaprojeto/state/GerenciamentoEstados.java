@@ -14,6 +14,8 @@ public class GerenciamentoEstados {
 
     public static Materia atualMateria;
 
+    public static Atividade atualAtividade;
+
     static {
         context = AppContext.builder().context(null).atividades(new ArrayList<Materia>()).build();
         context.materias.add(
@@ -145,6 +147,18 @@ public class GerenciamentoEstados {
 
     public static void setContext(AppCompatActivity cont){
         context.context = cont;
+    }
+
+    public static void addMateria(String nomeMateria){
+        context.materias.add(
+                Materia.builder().
+                        nome(nomeMateria).
+                        atividades(
+                                List.of(
+
+                                )
+                        ).build()
+        );
     }
 
 
