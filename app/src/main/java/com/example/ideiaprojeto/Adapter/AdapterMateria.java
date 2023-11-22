@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ideiaprojeto.R;
+import com.example.ideiaprojeto.calculo;
 import com.example.ideiaprojeto.listadeAtividades;
 import com.example.ideiaprojeto.model.Materia;
 import com.example.ideiaprojeto.state.GerenciamentoEstados;
@@ -51,6 +52,14 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.MateriaV
                 Intent telaListAtividades = new Intent(GerenciamentoEstados.context.context.getApplicationContext(), listadeAtividades.class);
                 GerenciamentoEstados.atualMateria = materia;
                 GerenciamentoEstados.context.context.startActivity(telaListAtividades);
+            }));
+        }
+
+        {
+            btnCalculo.setOnClickListener((View -> {
+                Intent telaCalculo = new Intent(GerenciamentoEstados.context.context.getApplicationContext(), calculo.class);
+                GerenciamentoEstados.atualMateria = materia;
+                GerenciamentoEstados.context.context.startActivity(telaCalculo);
             }));
         }
 

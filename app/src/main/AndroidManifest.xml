@@ -19,7 +19,7 @@
             android:name=".criacaodenovamateria"
             android:exported="false" />
         <activity
-            android:name=".apresentacao"
+            android:name=".calculo"
             android:exported="false" />
         <activity
             android:name=".activity_configuracao"
