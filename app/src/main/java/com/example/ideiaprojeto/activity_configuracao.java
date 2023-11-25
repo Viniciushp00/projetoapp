@@ -44,9 +44,7 @@ public class activity_configuracao extends AppCompatActivity {
             atividade.setNome(nome);
             atividade.setPeso(peso);
 
-            Intent telaInicial = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(telaInicial);
-
+            finish();
         }));
 
     }

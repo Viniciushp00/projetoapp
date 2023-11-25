@@ -37,6 +37,12 @@ public class AdapaterNotas extends RecyclerView.Adapter<AdapaterNotas.NotasViewH
         holder.nmAtividade.setText(atividade.getNome());
         holder.ntValor.setText(String.valueOf(atividade.getNota()));
         holder.atividade = atividade;
+
+        holder.ntValor.setOnFocusChangeListener((view, hasfocus) -> {
+            if(!hasfocus){
+                atividade.setNota( new Double(String.valueOf(holder.ntValor.getText())));
+            }
+        });
     }
 
     @Override

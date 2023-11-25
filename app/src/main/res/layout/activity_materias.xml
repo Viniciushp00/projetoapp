@@ -29,20 +29,21 @@
         android:textStyle="bold"/>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         style="@style/LinearList"
         app:layout_constraintEnd_toEndOf="@id/containerComponents"
         app:layout_constraintStart_toStartOf="@id/containerComponents"
         app:layout_constraintTop_toBottomOf="@id/nome_atividades">
 
         <Button
-            style="@style/buttom"
             android:id="@+id/btnConfiguracaoAtividade"
+            style="@style/buttom"
             android:text="Configurar"
             android:textSize="10sp" />
 
         <Button
-            style="@style/buttom"
             android:id="@+id/btnCalcular"
+            style="@style/buttom"
             android:text="Calcular"
             android:textSize="10sp" />
     </LinearLayout>
@@ -53,5 +54,15 @@
         android:background="@color/black"
         android:layout_margin="5dp"
         />
+
+    <Button
+        android:id="@+id/btnExcluir"
+        android:layout_width="57dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="72dp"
+        android:text="X"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

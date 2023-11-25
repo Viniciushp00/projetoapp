@@ -10,8 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ideiaprojeto.MainActivity;
 import com.example.ideiaprojeto.R;
 import com.example.ideiaprojeto.activity_configuracao;
+import com.example.ideiaprojeto.listadeAtividades;
 import com.example.ideiaprojeto.model.Atividade;
 import com.example.ideiaprojeto.model.Materia;
 import com.example.ideiaprojeto.state.GerenciamentoEstados;
@@ -39,6 +41,11 @@ public class AdapaterAtividades extends RecyclerView.Adapter<AdapaterAtividades.
         Atividade atividade = materia.getAtividades().get(position);
         holder.nomeAtividade.setText(atividade.getNome());
         holder.atividade = atividade;
+
+        holder.btnApagaAtividade.setOnClickListener((View -> {
+            materia.getAtividades().remove(position);
+            notifyItemRemoved(position);
+        }));
     }
 
     @Override
@@ -51,6 +58,9 @@ public class AdapaterAtividades extends RecyclerView.Adapter<AdapaterAtividades.
         Atividade atividade;
         TextView nomeAtividade = itemView.findViewById(R.id.nome_atividades);
         Button btnConfiguracao = itemView.findViewById(R.id.btnConfiguracaoAtividade);
+
+        Button btnApagaAtividade = itemView.findViewById(R.id.btnExcluirAtividade);
+
 
         {
             btnConfiguracao.setOnClickListener((View -> {

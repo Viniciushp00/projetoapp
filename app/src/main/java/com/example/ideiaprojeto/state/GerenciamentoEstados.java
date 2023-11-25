@@ -22,123 +22,113 @@ public class GerenciamentoEstados {
                 Materia.builder()
                         .nome("Sistemas")
                         .atividades(
-                                List.of(
-                                        Atividade.builder()
+                                new ArrayList(){{
+                                    add(Atividade.builder()
                                             .nome("A1")
-                                            .peso(2)
-                                            .nota(6.0)
+                                            .peso(1)
+                                            .nota(8.0)
                                             .build()
-                                        ,Atividade.builder()
-                                                .nome("A2")
-                                                .peso(4)
-                                                .nota(8.0)
-                                                .build()
-                                )
+                                    );
+                                    add(Atividade.builder()
+                                            .nome("A2")
+                                            .peso(1)
+                                            .nota(8.0)
+                                            .build()
+                                    );
+                                    add(Atividade.builder()
+                                            .nome("A2")
+                                            .peso(1)
+                                            .nota(8.0)
+                                            .build()
+                                    );
+                                    add(Atividade.builder()
+                                            .nome("A2")
+                                            .peso(1)
+                                            .nota(8.0)
+                                            .build()
+                                    );
+                                }}
 
                         )
+                        .notaN2(8.0)
+                        .aps(8.0)
                         .build()
         );
+
         context.materias.add(
                 Materia.builder()
                         .nome("Linguagem de Automatos")
                         .atividades(
-                                List.of(
-                                        Atividade.builder()
-                                                .nome("Dahora")
-                                                .peso(2)
-                                                .nota(6.0)
-                                                .build()
-                                        ,Atividade.builder()
-                                                .nome("Funciona")
-                                                .peso(4)
-                                                .nota(8.0)
-                                                .build()
-                                )
+                                new ArrayList(){{
+                                    add(Atividade.builder()
+                                            .nome("A1")
+                                            .peso(1)
+                                            .nota(8.0)
+                                            .build()
+                                    );
+                                    add(Atividade.builder()
+                                            .nome("A2")
+                                            .peso(1)
+                                            .nota(8.0)
+                                            .build()
+                                    );
+                                    add(Atividade.builder()
+                                            .nome("A2")
+                                            .peso(1)
+                                            .nota(8.0)
+                                            .build()
+                                    );
+                                    add(Atividade.builder()
+                                            .nome("A2")
+                                            .peso(1)
+                                            .nota(8.0)
+                                            .build()
+                                    );
+                                }}
 
                         )
+                        .notaN2(8.0)
+                        .aps(8.0)
                         .build()
         );
 
         context.materias.add(
-                Materia.builder()
-                        .nome("Matematica")
-                        .atividades(
-                                List.of(
-                                        Atividade.builder()
-                                                .nome("A1")
-                                                .peso(2)
-                                                .nota(6.0)
-                                                .build()
-                                        ,Atividade.builder()
-                                                .nome("A2")
-                                                .peso(4)
-                                                .nota(8.0)
-                                                .build()
-                                )
+                        Materia.builder()
+                                .nome("Matematica")
+                                .atividades(
+                                        new ArrayList(){{
+                                            add(Atividade.builder()
+                                                    .nome("A1")
+                                                    .peso(1)
+                                                    .nota(8.0)
+                                                    .build()
+                                            );
+                                            add(Atividade.builder()
+                                                    .nome("A2")
+                                                    .peso(1)
+                                                    .nota(8.0)
+                                                    .build()
+                                            );
+                                            add(Atividade.builder()
+                                                    .nome("A2")
+                                                    .peso(1)
+                                                    .nota(8.0)
+                                                    .build()
+                                            );
+                                            add(Atividade.builder()
+                                                    .nome("A2")
+                                                    .peso(1)
+                                                    .nota(8.0)
+                                                    .build()
+                                            );
+                                        }}
 
-                        )
-                        .build()
-        );
-        context.materias.add(
-                Materia.builder()
-                        .nome("Matematica")
-                        .atividades(
-                                List.of(
-                                        Atividade.builder()
-                                                .nome("A1")
-                                                .peso(2)
-                                                .nota(6.0)
-                                                .build()
-                                        ,Atividade.builder()
-                                                .nome("A2")
-                                                .peso(4)
-                                                .nota(8.0)
-                                                .build()
                                 )
+                                .notaN2(8.0)
+                                .aps(8.0)
+                                .build()
+                );
 
-                        )
-                        .build()
-        );
-        context.materias.add(
-                Materia.builder()
-                        .nome("Matematica")
-                        .atividades(
-                                List.of(
-                                        Atividade.builder()
-                                                .nome("A1")
-                                                .peso(2)
-                                                .nota(6.0)
-                                                .build()
-                                        ,Atividade.builder()
-                                                .nome("A2")
-                                                .peso(4)
-                                                .nota(8.0)
-                                                .build()
-                                )
-
-                        )
-                        .build()
-        );
-        context.materias.add(
-                Materia.builder()
-                        .nome("Matematica")
-                        .atividades(
-                                List.of(
-                                        Atividade.builder()
-                                                .nome("A1")
-                                                .peso(2)
-                                                .nota(6.0)
-                                                .build()
-                                        ,Atividade.builder()
-                                                .nome("A2")
-                                                .peso(4)
-                                                .nota(8.0)
-                                                .build()
-                                )
-
-                        )
-                        .build()
-        );
     }
 
     public static List<Materia> getMaterias() {
@@ -154,10 +144,11 @@ public class GerenciamentoEstados {
                 Materia.builder().
                         nome(nomeMateria).
                         atividades(
-                                List.of(
-
-                                )
-                        ).build()
+                                new ArrayList<>()
+                        )
+                        .notaN2(0.0)
+                        .aps(0.0)
+                        .build()
         );
     }
 

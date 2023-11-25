@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ideiaprojeto.MainActivity;
 import com.example.ideiaprojeto.R;
 import com.example.ideiaprojeto.calculo;
 import com.example.ideiaprojeto.listadeAtividades;
@@ -33,6 +34,12 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.MateriaV
         Materia materia = GerenciamentoEstados.getMaterias().get(position);
         holder.nome.setText(materia.getNome());
         holder.materia = materia;
+
+        holder.btnExcluir.setOnClickListener((View -> {
+            GerenciamentoEstados.getMaterias().remove(position);
+            notifyItemRemoved(position);
+        }));
+
     }
 
     @Override
@@ -46,6 +53,8 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.MateriaV
         TextView nome = itemView.findViewById(R.id.nome_atividades);
         Button btnConfiguracao = itemView.findViewById(R.id.btnConfiguracaoAtividade);
         Button btnCalculo = itemView.findViewById(R.id.btnCalcular);
+
+        Button btnExcluir = itemView.findViewById(R.id.btnExcluir);
 
         {
             btnConfiguracao.setOnClickListener((View -> {

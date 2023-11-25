@@ -13,6 +13,12 @@ import com.example.ideiaprojeto.state.GerenciamentoEstados;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button btnAddMateria;
+
+    RecyclerView recycleView_materias;
+
+    AdapterMateria adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,20 +26,27 @@ public class MainActivity extends AppCompatActivity {
 
         GerenciamentoEstados.setContext(this);
 
-        Button btnAddMateria = findViewById(R.id.addMateria);
+        btnAddMateria = findViewById(R.id.addMateria);
+        recycleView_materias = findViewById(R.id.recycleView_materias);
 
-        RecyclerView recycleView_materias = findViewById(R.id.recycleView_materias);
         recycleView_materias.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
         //Para dar mais desempenho a lista
         recycleView_materias.setHasFixedSize(true);
 
         //Configuração do Adapter
-        AdapterMateria adapter = new AdapterMateria();
+        adapter = new AdapterMateria();
         recycleView_materias.setAdapter(adapter);
 
         btnAddMateria.setOnClickListener((View -> {
-            Intent telaCriacaoMateria = new Intent(getApplicationContext(), criacaodenovamateria.class);
+            Intent telaCriacaoMateria = new Intent(this, criacaodenovamateria.class);
+            telaCriacaoMateria.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(telaCriacaoMateria);
         }));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        adapter.notifyDataSetChanged();
     }
 }
