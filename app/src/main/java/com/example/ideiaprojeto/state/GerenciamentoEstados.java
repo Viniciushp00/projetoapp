@@ -36,13 +36,13 @@ public class GerenciamentoEstados {
                                             .build()
                                     );
                                     add(Atividade.builder()
-                                            .nome("A2")
+                                            .nome("A3")
                                             .peso(1)
                                             .nota(8.0)
                                             .build()
                                     );
                                     add(Atividade.builder()
-                                            .nome("A2")
+                                            .nome("A4")
                                             .peso(1)
                                             .nota(8.0)
                                             .build()
@@ -73,13 +73,13 @@ public class GerenciamentoEstados {
                                             .build()
                                     );
                                     add(Atividade.builder()
-                                            .nome("A2")
+                                            .nome("A3")
                                             .peso(1)
                                             .nota(8.0)
                                             .build()
                                     );
                                     add(Atividade.builder()
-                                            .nome("A2")
+                                            .nome("A4")
                                             .peso(1)
                                             .nota(8.0)
                                             .build()
@@ -110,13 +110,13 @@ public class GerenciamentoEstados {
                                                     .build()
                                             );
                                             add(Atividade.builder()
-                                                    .nome("A2")
+                                                    .nome("A3")
                                                     .peso(1)
                                                     .nota(8.0)
                                                     .build()
                                             );
                                             add(Atividade.builder()
-                                                    .nome("A2")
+                                                    .nome("A4")
                                                     .peso(1)
                                                     .nota(8.0)
                                                     .build()

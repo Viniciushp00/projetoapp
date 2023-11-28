@@ -23,12 +23,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/containerComponents3"
         app:layout_constraintEnd_toEndOf="@+id/containerComponents3"
         app:layout_constraintStart_toStartOf="@+id/containerComponents3"
-        app:layout_constraintTop_toTopOf="@+id/containerComponents3"
-        android:inputType="number"/>
+        app:layout_constraintTop_toTopOf="@+id/containerComponents3" />
 
     <EditText
         android:id="@+id/ntValor"
@@ -36,8 +36,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="numberDecimal"
         android:text="Name"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/nmAtividade"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/nmAtividade" />

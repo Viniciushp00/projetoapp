@@ -12,9 +12,10 @@
         android:id="@+id/logo"
         style="@style/Text_View_princ"
         android:text="Configuração das Notas"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/recycleView_materias"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/recycleView_materias"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
